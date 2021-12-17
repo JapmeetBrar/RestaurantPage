@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('HeaderFont.ttf') format('truetype');
+}
+
+body{
+    background-image: url(./background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header{
+    height: 20%;
+    background-color: rgba(153, 153, 153, 0.75);
+    
+}
+
+.title{
+    padding: .5em;
+    text-align: center;
+    font-family: 'MyFont';
+    font-size: 5rem;
+    color: #893914;
+}
