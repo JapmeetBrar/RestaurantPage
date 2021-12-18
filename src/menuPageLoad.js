@@ -13,6 +13,15 @@ export default function loadMenuPage(){
     card.append(menuHeader, populateMenu(menu));
 
     content.append(card);
+
+    //---- SETTING ACTIVE BUTTON --------//
+    let mainPageBtn = document.querySelector('.main-page');
+    let contactPageBtn = document.querySelector('.contact-page');
+    let menuPageBtn = document.querySelector('.menu-page');
+    
+    mainPageBtn.classList.remove('active');
+    contactPageBtn.classList.remove('active');
+    menuPageBtn.classList.add('active');    
 }
 
 function populateMenu(itemList){
