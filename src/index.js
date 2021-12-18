@@ -1,6 +1,7 @@
 import './style.css';
 import createHeader from './createHeader';
 import loadMainPage from './mainPageLoad';
+import loadContactPage from './contactPageLoad';
 
 
 const LoadWebpage = (function(){

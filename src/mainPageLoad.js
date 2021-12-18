@@ -1,6 +1,6 @@
-import MapIcon from './location-icon.svg';
-import ClockIcon from './clock-icon.svg';
-import AboutIcon from './about-icon.svg';
+import MapIcon from './imgs/location-icon.svg';
+import ClockIcon from './imgs/clock-icon.svg';
+import AboutIcon from './imgs/about-icon.svg';
 
 export default function loadMainPage(){
     //---- LOADING DOM ELEMENTS --------//
@@ -70,13 +70,13 @@ export default function loadMainPage(){
     mapIcon.src = MapIcon;
     
     if (minWidth.matches){
-        aboutIcon.style.width = 'calc(24px + 8 * ((100vw - 320px) / 680))'
-        clockIcon.style.width = 'calc(24px + 8 * ((100vw - 320px) / 680))'
-        mapIcon.style.width = 'calc(24px + 8 * ((100vw - 320px) / 680))'
+        aboutIcon.style.width = 'calc(24px + 24 * ((100vw - 320px) / 680))'
+        clockIcon.style.width = 'calc(24px + 24 * ((100vw - 320px) / 680))'
+        mapIcon.style.width = 'calc(24px + 24 * ((100vw - 320px) / 680))'
     } else if(maxWidth.matches){
-        aboutIcon.style.width = '32px';
-        mapIcon.style.width = '32px';
-        clockIcon.style.width = '32px';
+        aboutIcon.style.width = '48px';
+        mapIcon.style.width = '48px';
+        clockIcon.style.width = '48px';
     }
     
     aboutText.append(aboutIcon);
@@ -91,4 +91,5 @@ export default function loadMainPage(){
     mainPageBtn.classList.add('active');
     contactPageBtn.classList.remove('active');
     menuPageBtn.classList.remove('active');
+
 }
