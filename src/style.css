@@ -48,6 +48,15 @@ body{
     padding: 1em 0;
 }
 
+.footer{
+    height: 10%;
+    width: 100%;
+    background-color: rgba(223, 137, 46);
+    display: flex;
+    justify-content: space-between;
+    padding: .15em 1em;
+}
+
 .title,
 .contact-title{
     text-align: center;
@@ -121,11 +130,20 @@ button:not(.active):hover{
     .name{
         font-size: calc(24px + 24 * ((100vw - 320px) / 680));
     }
+    .icon{
+        width: calc(24px + 24 * ((100vw - 320px) / 680));
+    }
     .body{
         font-size: calc(16px + 24 * ((100vw - 320px) / 680));
     }
     .item-pic{
         width: calc(100px + 250 * ((100vw - 320px) / 680));
+    }
+    .footer-text{
+        font-size: calc(12px + 8 * ((100vw - 320px) / 680));
+    }
+    .odin-icon{
+        width: calc(12px + 8 * ((100vw - 320px) / 680));
     }
 }
 @media (min-width: 1000px) {
@@ -145,11 +163,20 @@ button:not(.active):hover{
     .name {
         font-size: 48px;
     }
+    .icon{
+     width: 48px;
+    }
     .body {
         font-size: 40px;
     }
     .item-pic{
         width: 350px;
+    }
+    .footer-text{
+        font-size: 20px;
+    }
+    .odin-icon{
+        width: 20;
     }
 } 
 
@@ -192,4 +219,23 @@ button:not(.active):hover{
 
 .contact-title{
     text-decoration: underline;
+}
+
+.footer-text{
+    display: flex;
+    gap: .25em;
+    align-items:center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.fa-github{
+    color: black;
+}
+
+.fa-github:hover,
+.odin-icon:hover{
+    opacity: .7;
 }

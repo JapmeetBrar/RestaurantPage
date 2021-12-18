@@ -3,6 +3,8 @@ import menu from './menuItems'
 export default function loadMenuPage(){
     let content = document.querySelector('#content');
 
+    let header = document.querySelector('.header');
+    
     let card = document.createElement('div');
     card.className = 'card';
 
@@ -12,7 +14,7 @@ export default function loadMenuPage(){
 
     card.append(menuHeader, populateMenu(menu));
 
-    content.append(card);
+    header.after(card);
 
     //---- SETTING ACTIVE BUTTON --------//
     let mainPageBtn = document.querySelector('.main-page');

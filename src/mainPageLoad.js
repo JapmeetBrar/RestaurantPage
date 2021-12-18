@@ -6,6 +6,8 @@ export default function loadMainPage(){
     //---- LOADING DOM ELEMENTS --------//
     let content = document.querySelector('#content');
 
+    let header = document.querySelector('.header');
+
     let card = document.createElement('div');
     card.className = 'card';
 
@@ -50,8 +52,7 @@ export default function loadMainPage(){
 
     card.append(about, hours, location);
 
-    content.append(card);
-
+    header.after(card);
 
     //---- LOADING ICONS --------//
     let minWidth = window.matchMedia("(min-width: 320px)");
@@ -73,15 +74,15 @@ export default function loadMainPage(){
     clockIcon.src = ClockIcon;
     mapIcon.src = MapIcon;
     
-    if (minWidth.matches){
-        aboutIcon.style.width = 'calc(24px + 24 * ((100vw - 320px) / 680))'
-        clockIcon.style.width = 'calc(24px + 24 * ((100vw - 320px) / 680))'
-        mapIcon.style.width = 'calc(24px + 24 * ((100vw - 320px) / 680))'
-    } else if(maxWidth.matches){
-        aboutIcon.style.width = '48px';
-        mapIcon.style.width = '48px';
-        clockIcon.style.width = '48px';
-    }
+    // if (minWidth.matches){
+    //     aboutIcon.style.width = 'calc(24px + 24 * ((100vw - 320px) / 680))'
+    //     clockIcon.style.width = 'calc(24px + 24 * ((100vw - 320px) / 680))'
+    //     mapIcon.style.width = 'calc(24px + 24 * ((100vw - 320px) / 680))'
+    // } else if(maxWidth.matches){
+    //     aboutIcon.style.width = '48px';
+    //     mapIcon.style.width = '48px';
+    //     clockIcon.style.width = '48px';
+    // }
     
     aboutText.append(aboutIcon);
     hoursText.append(clockIcon);

@@ -1,6 +1,8 @@
 export default function loadContactPage(){
     let content = document.querySelector('#content');
 
+    let header = document.querySelector('.header');
+    
     let card = document.createElement('div');
     card.className = 'card';
 
@@ -33,7 +35,8 @@ export default function loadContactPage(){
     inPersonBody.textContent = '21 Park Lane Circle, Toronto, ON, M3B 1Z8';
 
     card.append(contactHeader, emailSubheader, emailBody, phoneSubheader, phoneBody, inPersonSubheader, inPersonBody);
-    content.append(card);
+    
+    header.after(card);
 
         //---- SETTING ACTIVE BUTTON --------//
     let mainPageBtn = document.querySelector('.main-page');

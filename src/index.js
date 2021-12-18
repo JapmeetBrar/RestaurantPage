@@ -13,21 +13,15 @@ const LoadWebpage = (function(){
     let menuPageBtn = document.querySelector('.menu-page');
 
     mainPageBtn.addEventListener('click', function(){
-        while (content.lastElementChild.className!=='header'){
-            content.removeChild(content.lastChild);
-        }
+        content.removeChild(document.querySelector('.card'));
         loadMainPage();
     })
     contactPageBtn.addEventListener('click', function(){
-        while (content.lastElementChild.className!=='header'){
-            content.removeChild(content.lastChild);
-        }
+        content.removeChild(document.querySelector('.card'));
         loadContactPage();
     })
     menuPageBtn.addEventListener('click', function(){
-        while (content.lastElementChild.className!=='header'){
-            content.removeChild(content.lastChild);
-        }
+        content.removeChild(document.querySelector('.card'));
         loadMenuPage();
     })
 })()
