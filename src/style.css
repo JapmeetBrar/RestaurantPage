@@ -41,15 +41,15 @@ body{
     height: 25%;
     width: 100%;
     background-color: rgba(223, 137, 46);
-    flex: 0 1 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center;
+    justify-content: center; */
     padding: 1em 0;
 }
 
-.title{
+.title,
+.contact-title{
     text-align: center;
     color: #382a1e;
     font-weight: bold;
@@ -99,17 +99,17 @@ button:not(.active):hover{
     display: flex;
     flex-direction: column;
     gap: 1em;
-
-
 }
 
 @media(min-width: 320px) {
     .title {
         font-size: calc(50px + 70 * ((100vw - 320px) / 680));
     }
-    button,
-    .contact-title{
+    button{
         font-size: calc(32px + 24 * ((100vw - 320px) / 680));
+    }
+    .contact-title{
+        font-size: calc(36px + 36 * ((100vw - 320px) / 680));
     }
     .active{
         border-width: calc(4px + 10 * ((100vw - 320px) / 680));
@@ -117,29 +117,39 @@ button:not(.active):hover{
     .card{
         width: calc(70% + 16 * ((100vw - 320px) / 680));
     }
-    .subheader{
+    .subheader,
+    .name{
         font-size: calc(24px + 24 * ((100vw - 320px) / 680));
     }
     .body{
         font-size: calc(16px + 24 * ((100vw - 320px) / 680));
+    }
+    .item-pic{
+        width: calc(100px + 250 * ((100vw - 320px) / 680));
     }
 }
 @media (min-width: 1000px) {
     .title {
         font-size: 120px;
     }
-    button,
-    .contact-title{
+    button{
         font-size: 56px;
+    }
+    .contact-title{
+        font-size: 72px;
     }
     .active{
         border-width: 14px;
     }
-    .subheader {
+    .subheader,
+    .name {
         font-size: 48px;
     }
     .body {
         font-size: 40px;
+    }
+    .item-pic{
+        width: 350px;
     }
 } 
 
@@ -150,10 +160,36 @@ button:not(.active):hover{
     gap: .25em;
 }
 
-img{
+.icon{
     padding-bottom: 5px;
 }
 
 .hours .body{
     line-height: 1.5;
+}
+
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.item{
+    display: flex;
+    gap: 1em;
+    text-align: start;
+
+}
+
+.descripton{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-pic{
+    align-self:flex-start;
+}
+
+.contact-title{
+    text-decoration: underline;
 }

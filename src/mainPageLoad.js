@@ -64,7 +64,11 @@ export default function loadMainPage(){
     let aboutIcon = new Image();
     let clockIcon = new Image();
     let mapIcon = new Image();
-    
+
+    aboutIcon.className = 'icon';
+    clockIcon.className = 'icon';
+    mapIcon.className = 'icon';
+
     aboutIcon.src = AboutIcon;
     clockIcon.src = ClockIcon;
     mapIcon.src = MapIcon;
