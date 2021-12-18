@@ -18,12 +18,8 @@ h1, h2, h3{
     font-family: 'HeaderFont';
 }
 
-p{
+p, button{
     font-family: 'BodyFont';
-}
-
-html, body{
-    height: 100%;
 }
 
 body{
@@ -33,60 +29,97 @@ body{
 }
 
 #content{
-    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 3em;
 }
 
 .header{
-    height: 10%;
-    background-color: rgba(153, 153, 153, 0.85);
+    height: 25%;
+    width: 100%;
+    background-color: rgba(223, 137, 46);
     flex: 0 1 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1em 0;
 }
 
 .title{
     text-align: center;
-    color: #893914;
+    color: #382a1e;
     font-weight: bold;
 }
 
+
 @media(min-width: 320px) {
-    .title {
-      font-size: calc(36px + 16 * ((100vw - 320px) / 680));
-    }
+
 }
 @media (min-width: 1000px) {
-    .title {
-      font-size: 52px;
-    }
+
 } 
 
-.container{
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.nav-bar{
+    top: 10px;
+    width: 100%;
+    padding: 0 1em;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em; 
 }
 
+button{
+    grid-column: span 1;
+    border: none;
+    border: solid 0.75px black;
+    background-color: rgba(223, 137, 46);
+    border-radius: 5px;
+    padding: .15em;
+    position: relative;
+    transition: transform 300ms;
+}
+
+button:hover{
+    transform: translatey(6px);
+}
+
+.active{
+    border: solid #893914;
+    border-radius: 8px;
+}
+
+
 .card{
-    min-height: 60%;
-    max-height: 80%;
+    min-height: 60%; 
+    height:100%;   
     color: #382a1e;
     background-color: rgba(223, 137, 46, 0.9);
     border-radius: 1em;
     text-align: center;
     padding: 1em;
+    margin: 1em 0;
     display: flex;
     flex-direction: column;
     gap: 1em;
+
+
 }
 
 @media(min-width: 320px) {
-    .card {
-      width: calc(70% + 16 * ((100vw - 320px) / 680));
+    .title {
+        font-size: calc(50px + 70 * ((100vw - 320px) / 680));
+    }
+    button{
+        font-size: calc(32px + 24 * ((100vw - 320px) / 680));
+    }
+    .active{
+        border-width: calc(4px + 10 * ((100vw - 320px) / 680));
+    }
+    .card{
+        width: calc(70% + 16 * ((100vw - 320px) / 680));
     }
     .subheader{
         font-size: calc(24px + 8 * ((100vw - 320px) / 680));
@@ -96,6 +129,15 @@ body{
     }
 }
 @media (min-width: 1000px) {
+    .title {
+        font-size: 120px;
+    }
+    button{
+        font-size: 56px;
+    }
+    .active{
+        border-width: 14px;
+    }
     .subheader {
         font-size: 32px;
     }
@@ -113,4 +155,8 @@ body{
 
 img{
     padding-bottom: 5px;
+}
+
+.hours .body{
+    line-height: 1.5;
 }
