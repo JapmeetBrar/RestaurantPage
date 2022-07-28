@@ -1,6 +1,8 @@
 import OdinLogo from "./imgs/odin-logo.svg";
 
 export default function createHeader() {
+  let content = document.querySelector("#content");
+
   let header = document.createElement("div");
   header.className = "header";
 
