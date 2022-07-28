@@ -1,69 +1,68 @@
-import OdinLogo from './imgs/odin-logo.svg';
+import OdinLogo from "./imgs/odin-logo.svg";
 
-export default function createHeader(){
-    let content = document.querySelector('#content');
+export default function createHeader() {
+  let content = document.querySelector("#content");
 
+  let header = document.createElement("div");
+  header.className = "header";
 
-    let header = document.createElement('div');
-    header.className = 'header';
+  let title = document.createElement("h1");
+  title.textContent = "JAPS WING SHOP";
+  title.className = "title";
 
-    let title = document.createElement('h1');
-    title.textContent = "JAPS WING SHOP";
-    title.className = 'title';
+  let navBar = document.createElement("div");
+  navBar.className = "nav-bar";
 
-    let navBar = document.createElement('div');
-    navBar.className = 'nav-bar';
+  let mainPageBtn = document.createElement("button");
+  mainPageBtn.className = "main-page";
+  mainPageBtn.textContent = "Main";
 
-    let mainPageBtn = document.createElement('button');
-    mainPageBtn.className = 'main-page';
-    mainPageBtn.textContent = 'Main';
+  let contactPageBtn = document.createElement("button");
+  contactPageBtn.className = "contact-page";
+  contactPageBtn.textContent = "Contact";
 
-    let contactPageBtn = document.createElement('button');
-    contactPageBtn.className = 'contact-page';
-    contactPageBtn.textContent = 'Contact';
+  let menuPageBtn = document.createElement("button");
+  menuPageBtn.className = "menu-page";
+  menuPageBtn.textContent = "Menu";
 
-    let menuPageBtn = document.createElement('button');
-    menuPageBtn.className = 'menu-page';
-    menuPageBtn.textContent = 'Menu';
+  navBar.append(mainPageBtn, contactPageBtn, menuPageBtn);
 
-    navBar.append(mainPageBtn, contactPageBtn, menuPageBtn);
+  header.append(title, navBar);
 
-    header.append(title, navBar);
-    
-    let footer = document.createElement('div');
-    footer.className = 'footer';
+  let footer = document.createElement("div");
+  footer.className = "footer";
 
-    let odinRefContainer = document.createElement('div');
-    odinRefContainer.className = 'footer-text';
+  let odinRefContainer = document.createElement("div");
+  odinRefContainer.className = "footer-text";
 
-    let odinRefText = document.createElement('p')
-    odinRefText.textContent = 'Created as a part of TheOdinProject Curriculum'
-    
-    let odinRefLink = document.createElement('a');
-    odinRefLink.href = 'https://www.theodinproject.com/';
+  let odinRefText = document.createElement("p");
+  odinRefText.textContent = "Created as a part of TheOdinProject Curriculum";
 
-    let odinLogo = new Image();
-    odinLogo.className = 'odin-icon';
-    odinLogo.src = OdinLogo;
+  let odinRefLink = document.createElement("a");
+  odinRefLink.href = "https://www.theodinproject.com/";
 
-    odinRefLink.append(odinLogo)
+  let odinLogo = new Image();
+  odinLogo.className = "odin-icon";
+  odinLogo.src = OdinLogo;
 
-    odinRefContainer.append(odinRefText, odinRefLink);
+  odinRefLink.append(odinLogo);
 
-    let githubRefContainer = document.createElement('div');
-    githubRefContainer.className = 'footer-text';
+  odinRefContainer.append(odinRefText, odinRefLink);
 
-    let githubRefText = document.createElement('p');
-    githubRefText.textContent = 'Copyright © 2021 JapmeetBrar';
+  let githubRefContainer = document.createElement("div");
+  githubRefContainer.className = "footer-text";
 
-    let githubRefLink = document.createElement('a');
-    githubRefLink.href = 'https://github.com/JapmeetBrar/';
-    githubRefLink.className = 'fa fa-github';
+  let githubRefText = document.createElement("p");
+  githubRefText.textContent = "Copyright © 2021 JapmeetBrar";
 
-    githubRefContainer.append(githubRefText, githubRefLink);
+  let githubRefLink = document.createElement("a");
+  githubRefLink.href = "https://github.com/JapmeetBrar/";
+  githubRefLink.className = "fa fa-github";
 
-    footer.append(odinRefContainer, githubRefContainer);
+  githubRefContainer.append(githubRefText, githubRefLink);
 
-    content.append(header);
-    content.append(footer);
+  footer.append(odinRefContainer, githubRefContainer);
+
+  content.append(header);
+  content.append(footer);
 }
